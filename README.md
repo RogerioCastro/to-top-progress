@@ -47,7 +47,7 @@ const btnToTop = new ToTopProgress(options);
 | `container` | `string` | Container HTML onde o botão será incluído (query selector). Valor padrão: `'body'`. |
 | `observerContainer` | `string` | Container HTML que terá seu redimensionamento observado (query selector). Valor padrão: `'body'`. |
 | `minScrollHeight` | `number` | Quantidade, em pixels, da rolagem para que o botão seja exibido. Valor padrão: `200`. |
-| `custonClass` | `string` | Classe a ser adiconada ao container do botão. Valor padrão: `null`. |
+| `extraClass` | `string` | Classe a ser adiconada ao container do botão. Valor padrão: `null`. |
 | `color` | `string` | Cor dos elementos do botão (CSS color). Valor padrão: `'#ff00ff'`. |
 | `colorBackground` | `string` | Cor de fundo do botão (CSS color). Valor padrão: `null`. |
 | `colorHover` | `string` | Cor dos elementos do botão ao passar o mouse sobre (CSS color). Valor padrão: `null`. |

@@ -7,7 +7,7 @@ export default class ToTopProgress {
    * @param {string} options.container - Container HTML onde o botão será incluído (query selector).
    * @param {string} options.observerContainer - Container HTML que terá seu redimensionamento observado (query selector).
    * @param {number} options.minScrollHeight - Quantidade, em pixels, da rolagem para que o botão seja exibido.
-   * @param {string} options.custonClass - Classe a ser adiconada ao container do botão.
+   * @param {string} options.extraClass - Classe a ser adiconada ao container do botão.
    * @param {string} options.color - Cor dos elementos do botão (CSS color).
    * @param {string} options.colorBackground - Cor de fundo do botão (CSS color).
    * @param {string} options.colorHover - Cor dos elementos do botão ao passar o mouse sobre (CSS color).
@@ -19,7 +19,7 @@ export default class ToTopProgress {
       container: 'body',
       observerContainer: 'body',
       minScrollHeight: 200,
-      custonClass: null,
+      extraClass: null,
       color: null,
       colorBackground: null,
       colorHover: null,
@@ -65,7 +65,7 @@ export default class ToTopProgress {
     this.elements.containerElement = document.querySelector(this.settings.container)
     if (this.elements.containerElement) {
       this.elements.progressWrap = createElement('div', {
-        className: this.settings.custonClass ? `tt-progress-wrap ${this.settings.custonClass}` : 'tt-progress-wrap',
+        className: this.settings.extraClass ? `tt-progress-wrap ${this.settings.extraClass}` : 'tt-progress-wrap',
         style: this.styleColorTrack
       })
       this.elements.svgElement = createElement(
