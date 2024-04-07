@@ -72,7 +72,7 @@ $ npm run build
 
 ## Créditos
 
-[Sandbox Template](https://preview.themeforest.net/item/sandbox-modern-multipurpose-vue-nuxtjs-3-template/full_screen_preview/51057440).
+Inspiração: [Sandbox Template](https://preview.themeforest.net/item/sandbox-modern-multipurpose-vue-nuxtjs-3-template/full_screen_preview/51057440).
 
 ## License
 
