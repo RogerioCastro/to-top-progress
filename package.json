@@ -1,0 +1,29 @@
+{
+  "name": "to-top-progress",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Rogério Castro <https://github.com/RogerioCastro>",
+  "description": "Botão ir para o topo da página com barra de progresso baseada no tamanho da página",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/to-top-progress.min.js",
+  "exports": {
+    ".": {
+      "require": "./dist/to-top-progress.min.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.74.1",
+    "vite": "^5.2.0",
+    "vite-plugin-banner": "^0.7.1",
+    "vite-plugin-css-injected-by-js": "^3.5.0"
+  }
+}

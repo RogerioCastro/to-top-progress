@@ -1,0 +1,44 @@
+$color-track: #80818540;
+$color-stroke: #ff00ff;
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.tt-progress-wrap {
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  z-index: 1010;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1.6px $color-track;
+  transition: all .2s linear, margin-right 0ms;
+  transform: translateY(20px);
+  visibility: hidden;
+  opacity: 0;
+  &.active-progress {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+  .tt-progress-svg {
+    .tt-progress-circle {
+      stroke: $color-stroke;
+      stroke-width: 4;
+      box-sizing: border-box;
+      fill: none;
+      transition: stroke .1s linear;
+      shape-rendering: geometricPrecision;
+    }
+    .tt-progress-arrow {
+      fill: $color-stroke;
+      transition: fill .1s linear;
+      shape-rendering: geometricPrecision;
+    }
+  }
+}
