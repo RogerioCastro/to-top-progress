@@ -52,6 +52,8 @@ const btnToTop = new ToTopProgress(options);
 | `colorBackground` | `string` | Cor de fundo do botão (CSS color). Valor padrão: `null`. |
 | `colorHover` | `string` | Cor dos elementos do botão ao passar o mouse sobre (CSS color). Valor padrão: `null`. |
 | `colorTrack` | `string` | Cor da trilha sob a barra de progresso (CSS color). Valor padrão: `'#80818540'`. |
+| `positionRight` | `number` | Distância do botão em relação à margem direita da janela (pixels). Valor padrão: `30`. |
+| `positionBottom` | `number` | Distância do botão em relação à base da janela (pixels). Valor padrão: `30`. |
 
 ## Desenvolvimento
 

@@ -12,6 +12,8 @@ export default class ToTopProgress {
    * @param {string} options.colorBackground - Cor de fundo do botão (CSS color).
    * @param {string} options.colorHover - Cor dos elementos do botão ao passar o mouse sobre (CSS color).
    * @param {string} options.colorTrack - Cor da trilha sob a barra de progresso (CSS color).
+   * @param {number} options.positionRight - Distância do botão em relação à margem direita da janela (pixels).
+   * @param {number} options.positionBottom - Distância do botão em relação à base da janela (pixels).
    */
   constructor(options) {
     // Configurações iniciais
@@ -24,6 +26,8 @@ export default class ToTopProgress {
       colorBackground: null,
       colorHover: null,
       colorTrack: null,
+      positionRight: null,
+      positionBottom: null,
       ...options
     }
     this.elements = {
@@ -35,9 +39,16 @@ export default class ToTopProgress {
       observerElement: null
     }
     this.ro = null
-    this.styleColorTrack = this.settings.colorTrack
+    // Verificando estilos a serem aplicados se houver preenchimento das opções
+    this.styleWrap = this.settings.colorTrack
       ? { boxShadow: `inset 0 0 0 1.6px ${this.settings.colorTrack}` }
       : {}
+    this.styleWrap = this.settings.positionRight !== null
+      ? { right: `${this.settings.positionRight}px`, ...this.styleWrap }
+      : this.styleWrap
+    this.styleWrap = this.settings.positionBottom !== null
+      ? { bottom: `${this.settings.positionBottom}px`, ...this.styleWrap }
+      : this.styleWrap
     this.styleColorCircle = this.settings.color
       ? { stroke: this.settings.color }
       : {}
@@ -66,7 +77,7 @@ export default class ToTopProgress {
     if (this.elements.containerElement) {
       this.elements.progressWrap = createElement('div', {
         className: this.settings.extraClass ? `tt-progress-wrap ${this.settings.extraClass}` : 'tt-progress-wrap',
-        style: this.styleColorTrack
+        style: this.styleWrap
       })
       this.elements.svgElement = createElement(
         'svg',
